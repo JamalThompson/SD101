@@ -8,33 +8,44 @@ document.getElementById(divID).style.backgroundImage = "url(./images/X.jpg)";
 gameBoard[n] = "X";
 
 
-if(isWinner()){
-  document.getElementById("divDeclareWinner").innerHTML = "You Win!";
-  return;
-}
-else if (isBoardFull()){
-  document.getElementById("divDeclareWinner").innerHTML ="&#128049; Cat Game &#128049;"
-  return;
+if (isWinnerorCat("You Win!")) {
+  document.getElementById("divDeclareWinner").innerHTML = strMessage;
+  document.getElementById("btnPlayAgain").style.display = "block";
+  return true;
 }
 
 cpuPlay();
-if(isWinner()){
-  document.getElementsByClassName("divDeclareWinner").innerHTML ="You lose....";
+
+if (isWinnerorCat("You lose...")) {
   return ;
+
 }
 
-else if (isBoardFull()){
-  document.getElementById("divDeclareWinner").innerHTML ="&#128049; Cat Game &#128049;"
-  return;
-}
+
+
+
+
+
+
 
 }
 
 function isWinnerorCat(strMessage){
   if(isWinner()){
     document.getElementById("divDeclareWinner").innerHTML = strMessage;
+    document.getElementById("btnPlayAgain").style.display = "block";
     return true;
   }
+
+else if (isBoardFull()) {
+  document.getElementById("divDeclareWinner").innerHTML = "&#128049; Cat Game &#128049;"
+  document.getElementById("btnPlayAgain").style.display = "block";
+  return true;
+
+}
+
+
+
 
   return false;
 }
@@ -42,9 +53,8 @@ function isWinnerorCat(strMessage){
 
 function isBoardFull() {
   for(var i = 0; i<gameBoard.length; i++)
-
 {
-  if(gameBoard[i]!='X' && gameBoard[i]!='O')
+  if(isSpotEmpty(i))
   {
     return false;
   }
@@ -52,6 +62,14 @@ function isBoardFull() {
 }
 
 return  true;
+
+}
+
+
+function isSpotEmpty(i) {
+  if(gameBoard[i] !='X' && gameBoard[i] !='O'){
+    return true;
+  }
 
 }
 
@@ -74,10 +92,15 @@ do{
 
 
 function isWinner() {
-  if((gameBoard[0]==gameBoard[1] && gameBoard[0]== gameBoard[2])||(gameBoard[4] && gameBoard[3]==gameBoard[5])|| (gameBoard[6]==gameBoard[7] && gameBoard[6]==gameBoard[8]))
+  if((gameBoard[0]==gameBoard[1] && gameBoard[0]== gameBoard[2])||(gameBoard[3]==gameBoard[4] && gameBoard[3]==gameBoard[5])|| (gameBoard[6]==gameBoard[7] && gameBoard[6]==gameBoard[8]))
 
   {
     return true;
+  }
+
+  else if ((gameBoard[0]==gameBoard[3] && gameBoard[0] == gameBoard[6])||(gameBoard[1]==gameBoard[4] && gameBoard[1]==gameBoard[7])|| (gameBoard[2]==gameBoard[5] && gameBoard[2]==gameBoard[8])) {
+    return true;
+
   }
 
 else if
@@ -97,5 +120,13 @@ else {
 
 
 function newGame(){
+  gameBoard = [0,1,2,3,4,5,6,7,8];
+
+  for (var n = 0; n < gameBoard.length; n++) {
+  document.getElementById(gameBoardDisplayIDs[n]).style.backgroundImage = "url(images/blank.jpg)";
+  }
+
+document.getElementById("divDeclareWinner").innerHTML = "";
+document.getElementById("btnPlayAgain").style.display = "none";
 
 }

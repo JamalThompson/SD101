@@ -1,0 +1,53 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="form center-in-container row">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+
+
+
+<div class="col-sm-5">
+
+
+<div *ngFor="let product of allProducts"  (click)="onselect(product)"class="">
+  <p><span class="badge">Name</span>{{product.name}}</p>
+
+
+<div class="">
+Name:{{product.name}}
+</div>
+
+
+</div>
+</div>
+
+
+<div class="col-sm-2">
+
+</div>
+
+<div *ngIf="selectedProduct"class="products col=sm-5">
+  <div class="">
+    <span class="badge">Name</span>
+    <input type="text" [(ngModel)]="selectedProduct.name" placeholder="name" name="" value="">
+    </div>
+
+
+  <div class="">
+  <span class="badge">description</span>
+    <input type="text" [(ngModel)]="selectedProduct.description" placeholder="description" name="" value="">
+
+  </div>
+
+  <div class="">
+  <span class="price">price</span>
+    <input type="text" [(ngModel)]="selectedProduct.price" placeholder="price" name="" value="">
+    </div>
+
+<input type="submit" name="" value="save" (click)="saveProduct()" class="btn btn-primary">
+
+
+</div>
+
+
+</div>

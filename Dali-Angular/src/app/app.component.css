@@ -1,0 +1,47 @@
+.btn-primary{
+  background-color: #cf9853;
+  color: white;
+}
+
+.products{
+  list-style-type: none;
+  padding: 0;
+  width: 300px;
+}
+
+.products div{
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  padding: .3em 0;
+  height: 3em;
+  border-radius: 4px;
+}
+
+.products p{
+  background-color: #EEE;
+  border-radius: 4px;
+  color: black;
+}
+
+.products p:hover{
+  color: #607D8B;
+  left: .1em;
+}
+
+.products input{
+  position: relative;
+  color: black;
+}
+
+.products .badge{
+  display: inline-block;
+  font-size: small;
+  color:white;
+  background-color: #98644e;
+  line-height: 1em;
+  position: relative;
+  height: 1.8em;
+  margin-right: 1em;
+  border-radius: 4px 0 0 4px;
+}

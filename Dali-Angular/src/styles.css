@@ -1,0 +1,141 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+
+
+
+
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: url("images/The Anthropomorphic Cabinet.jpg") top/ cover  no-repeat fixed;
+  color: white;
+  margin: 0px;
+}
+
+
+
+
+header {
+  background-color: #62433f;
+  color:white;
+
+
+
+  font: 100% verdana, sans-serif;
+  font-family: 'Adelle W01 Bold', 'Arvo', constantia, 'Lucida Bright', lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif';
+}
+
+figure {
+  border: 5px double #62433f;
+  background-color: #98644e;
+  padding: 5px;
+  display: table;
+}
+
+footer{
+  background-color: #62433f;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+ .navbar-collapse
+{
+
+}
+  .navbar-nav a
+  {
+    color: white;
+  }
+
+.navbar-nav li > a:hover{
+  background-color: transparent;
+  color:white;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+.form legend{
+  color: white;
+  text-align: center;
+}
+.form button{
+  border-color: white;
+  background-color: #62433f;
+}
+
+
+.form button{
+  border-color: #98644e;
+  border-color: #98644e;
+}
+
+
+.no-padding{
+  padding:0;
+}
+.no-border{
+  border: 0px;
+}
+
+.no-left-margin{
+  margin-left: 0px;
+}
+
+.no-lr-margin{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.form{
+  width: 500px;
+  margin: 10% auto;
+}
+
+.input-group{
+  margin: 1em;
+}
+.no-top-margin{
+  margin-top: 0;
+}
+
+.table-format{
+  display: table;
+}
+  .banner{
+    width: 30%;
+    height: 0%;
+  }
+
+
+  .quote{
+    width: 35%;
+  }
+
+
+.center-in-container{
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.showcase img{
+  width: 100%;
+}
+
+.table-hover>tbody>tr:hover{
+  color: black;
+}
+
+caption{
+  color: white;
+  font-size: 1.5em;
+}
+
+.thumbnails img{
+  width: 150px;
+  height: 100px;
+
+}
